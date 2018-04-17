@@ -6,7 +6,7 @@ module DataMigrate
   class DatabaseTasks
     extend ActiveRecord::Tasks::DatabaseTasks
 
-    def self.data_schema_file
+    def self.schema_file(_format=nil)
       File.join(db_dir, "data_schema.rb")
     end
   end
